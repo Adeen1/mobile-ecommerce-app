@@ -1,0 +1,24 @@
+.sale{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sale-header{
+    padding-top: 130px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    margin:20px 10%;
+    padding: 50px;
+    border: 1px solid black;
+}
+.sale-image{
+    width: 30vw;
+    height:40vh
+}
