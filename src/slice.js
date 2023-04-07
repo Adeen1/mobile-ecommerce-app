@@ -13,9 +13,29 @@ const productSlice = createSlice({
   initialState: initialVal,
   reducers: {
     setProduct: (state, action) => {
-      return action.payload;
+      state = action.payload.item;
+      return { ...state };
     },
   },
 });
-export default productSlice.reducer;
-export const { setProduct } = productSlice.actions;
+
+const initialAuth = {
+  authorized: {},
+  data: {},
+};
+const authSlice = createSlice({
+  name: "autherized",
+  initialState: initialAuth,
+  reducers: {
+    changeVal: (state, action) => {
+      state.data = action.payload;
+    },
+  },
+});
+const productReducer = productSlice.reducer;
+const productAction = productSlice.actions;
+const autherizedReducer = authSlice.reducer;
+const autherizedAction = authSlice.actions;
+// export default productSlice.reducer;
+// export const { setProduct } = productSlice.actions;
+export { productReducer, productAction, autherizedAction, autherizedReducer };
