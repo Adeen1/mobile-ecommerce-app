@@ -135,7 +135,7 @@ const SingleProduct = ({ filter, validation }) => {
   const [visiilty, setVisibilty] = useState(false);
   const fetchingData = async () => {
     await axios
-      .post("https://backend-adeen.fly.dev/getAllProduct", filter)
+      .post("https://backend-adeen.fly.dev/api/getAllProduct", filter)
       .then((res) => {
         setData(res.data);
         setVisibilty(true);
