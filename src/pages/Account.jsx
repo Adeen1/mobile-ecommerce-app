@@ -18,7 +18,9 @@ const Account = () => {
   const [data, setData] = useState([]);
   const fetchData = async () => {
     await axios
-      .post("http://localhost:5000/api/getAccount", { email: user.email })
+      .post("https://backend-adeen.fly.dev/api/getAccount", {
+        email: user.email,
+      })
       .then((res) => {
         setData(res.data);
       })
@@ -29,7 +31,7 @@ const Account = () => {
   const deleteData = async (id) => {
     console.log(user.email);
     await axios
-      .post("http://localhost:5000/api/delProduct", {
+      .post("https://backend-adeen.fly.dev/api/delProduct", {
         email: user.email,
         id: id,
       })

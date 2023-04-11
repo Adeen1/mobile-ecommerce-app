@@ -21,7 +21,7 @@ const Navbar = () => {
   const addUser = async () => {
     console.log("hello");
     await axios
-      .post("http://localhost:5000/api/addUser", {
+      .post("https://backend-adeen.fly.dev/api/addUser", {
         username: user.name,
         email: user.email,
       })

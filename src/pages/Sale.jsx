@@ -113,7 +113,7 @@ const Sale = () => {
       var done = () => {
         if (url_list.length === filearr.length) {
           axios
-            .post("http://localhost:5000/api/sale", {
+            .post("https://backend-adeen.fly.dev/api/sale", {
               username: user.name,
               productName: nameRef.current.value,
               productType: type,

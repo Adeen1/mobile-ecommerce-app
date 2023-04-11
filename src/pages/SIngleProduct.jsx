@@ -18,7 +18,7 @@ const SIngleProduct = () => {
   const checkConvo = async () => {
     console.log(user.email, item.email);
     await axios
-      .post("http://localhost:5000/api/chat/checkConvo", {
+      .post("https://backend-adeen.fly.dev/api/chat/checkConvo", {
         sender: user.email,
         receiver: item.email,
       })
@@ -46,7 +46,7 @@ const SIngleProduct = () => {
   }, [useAuth0()]);
   const startConvo = async () => {
     await axios
-      .post("http://localhost:5000/api/chat/creatConvo", {
+      .post("https://backend-adeen.fly.dev/api/chat/creatConvo", {
         senderEmail: user.email,
         receiverEmail: item.email,
       })
@@ -176,7 +176,7 @@ const SIngleProduct = () => {
                       return;
                     }
                     axios
-                      .post("http://localhost:5000/api/cartadd", {
+                      .post("https://backend-adeen.fly.dev/api/cartadd", {
                         username: user.name,
                         email: user.email,
                         cart: item,

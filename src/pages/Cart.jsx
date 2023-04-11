@@ -19,7 +19,7 @@ const Cart = () => {
   const deleteData = async (id) => {
     console.log(user.email);
     await axios
-      .post("http://localhost:5000/api/delItem", {
+      .post("https://backend-adeen.fly.dev/api/delItem", {
         email: user.email,
         id: id,
       })
@@ -33,7 +33,7 @@ const Cart = () => {
   };
   const getCart = async () => {
     await axios
-      .post("http://localhost:5000/api/getcart", {
+      .post("https://backend-adeen.fly.dev/api/getcart", {
         email: user.email,
       })
       .then((response) => {
