@@ -41,7 +41,7 @@ const About = () => {
         opacity: 0,
       });
     }
-  }, [inView]);
+  }, [inView, animation, animation_btn1, animation_btn2]);
 
   return (
     <div className="About">
